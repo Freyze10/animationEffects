@@ -1,0 +1,363 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    padding: 50px 0;
+    display: grid;
+    position: relative;
+    justify-content: center;
+    grid-gap: 1.5rem;
+    background-color: rgb(76, 87, 87);
+}
+.wifi {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+}
+.wifi span {
+    position: absolute;
+    border: 20px solid transparent;
+    border-top: 20px solid blue;
+    border-radius: 50%;
+    animation: wi-fi 1s linear infinite;
+}
+.wifi span:nth-child(1) {
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation-delay: 1s;
+}
+.wifi span:nth-child(2) {
+    top: 90px;
+    left: 30px;
+    right: 30px;
+    bottom: 0;
+    animation-delay: .7s;
+}
+.wifi span:nth-child(3) {
+    top: 130px;
+    left: 60px;
+    right: 60px;
+    bottom: -20px;
+    animation-delay: .5s;
+}
+.wifi span:nth-child(4) {
+    top: 160px;
+    left: 90px;
+    right: 90px;
+    bottom: 0;
+    height: 0;
+    width: 0;
+    border: 10px solid rgb(39, 39, 255);
+    border-radius: 50%;
+    animation: none;
+}
+@keyframes wi-fi {
+    0% {
+        border-top-color: blue;
+    }
+    100% {
+        border-top-color: gainsboro;
+    }
+}
+.glow-border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+}
+.glow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 150px;
+    width: 180px;
+    overflow: hidden;
+}
+.glow1 {
+    position: absolute;
+    height: 200px;
+    width: 300px;
+    background: linear-gradient(to right, rgb(71, 212, 255) 8%, rgba(71, 212, 255, 1) 20%, transparent 30%, transparent);
+    animation: glowi 4s linear infinite;
+}
+.glow2 {
+    position: absolute;
+    height: 400px;
+    width: 300px;
+    background: linear-gradient(to right, rgb(71, 212, 255) 8%, rgba(71, 212, 255, 1) 20%, transparent 30%, transparent);
+    animation: glowi 4s linear infinite;
+    animation-delay: -2s;
+}
+.inside-glow {
+    position: absolute;
+    height: 130px;
+    width: 160px;
+    background-color: rgb(76, 87, 87);
+    animation: none;
+    text-align: center;
+    padding: 50px 0;
+    color: whitesmoke;
+    font-size: 20px;
+}
+@keyframes glowi {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.border-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+}
+.circle-path {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border: 1px solid violet;
+}
+.circle-path::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    opacity: .7;
+    background-color: beige;
+    border-radius: 50%;
+    animation: circflow 3s linear infinite;
+    animation-delay: .6s;
+}
+.circle-path::after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    opacity: .6;
+    background-color: beige;
+    border-radius: 50%;
+    animation: circflow 3s linear infinite;
+    animation-delay: .8s;
+}
+.circle {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: beige;
+    border-radius: 50%;
+    animation: circflow 3s linear infinite;
+}
+.circle1 {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    opacity: .9;
+    background-color: beige;
+    border-radius: 50%;
+    animation: circflow 3s linear infinite;
+    animation-delay: .2s;
+}
+.circle2 {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    opacity: .8;
+    background-color: beige;
+    border-radius: 50%;
+    animation: circflow 3s linear infinite;
+    animation-delay: .4s;
+}
+@keyframes circflow {
+    0% {
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+    }
+    25% {
+        top: 0;
+        left: 150px;
+        transform: translate(-50%, -50%);
+    }
+    50% {
+        top: 150px;
+        left: 150px;
+        transform: translate(-50%, -50%);
+    }
+    75% {
+        top: 150px;
+        left: 0;
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+    }
+}
+.border-shadow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+}
+.mini-circ {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 1px 1px rgba(49, 49, 232, 0.511);
+    border-radius: 50%;
+    animation: shadow 1.7s linear infinite;
+}
+.shadcont {
+    position: absolute;
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+}
+.shadcont:nth-child(2) {
+    transform: rotate(20deg);
+}
+.shadcont:nth-child(2) .mini-circ{
+    animation: shadow 1.7s linear infinite;
+    animation-delay: .1s;
+}
+.shadcont:nth-child(3) {
+    transform: rotate(40deg);
+}
+.shadcont:nth-child(3) .mini-circ{
+    animation: shadow 1.7s linear infinite;
+    animation-delay: .2s;
+}
+.shadcont:nth-child(4) {
+    transform: rotate(60deg);
+}
+.shadcont:nth-child(4) .mini-circ{
+    animation: shadow 1.7s linear infinite;
+    animation-delay: .3s;
+}
+.shadcont:nth-child(5) {
+    transform: rotate(80deg);
+}
+.shadcont:nth-child(5) .mini-circ{
+    animation: shadow 1.7s linear infinite;
+    animation-delay: .4s;
+}
+.shadcont:nth-child(6) {
+    transform: rotate(100deg);
+}
+.shadcont:nth-child(6) .mini-circ{
+    animation: shadow 1.7s linear infinite;
+    animation-delay: .5s;
+}
+.shadcont:nth-child(7) {
+    transform: rotate(120deg);
+}
+.shadcont:nth-child(7) .mini-circ{
+    animation: shadow 1.7s linear infinite;
+    animation-delay: .6s;
+}
+.shadcont:nth-child(8) {
+    transform: rotate(140deg);
+}
+.shadcont:nth-child(8) .mini-circ{
+    animation: shadow 1.7s linear infinite;
+    animation-delay: .7s;
+}
+.shadcont:nth-child(9) {
+    transform: rotate(160deg);
+}
+.shadcont:nth-child(9) .mini-circ{
+    animation: shadow 1.7s linear infinite;
+    animation-delay: .8s;
+}
+.shadcont:nth-child(10) {
+    transform: rotate(180deg);
+}
+.shadcont:nth-child(10) .mini-circ{
+    animation: shadow 1.7s linear infinite;
+    animation-delay: .9s;
+}
+.shadcont:nth-child(11) {
+    transform: rotate(200deg);
+}
+.shadcont:nth-child(11) .mini-circ{
+    animation: shadow 1.7s linear infinite;
+    animation-delay: 1s;
+}
+.shadcont:nth-child(12) {
+    transform: rotate(220deg);
+}
+.shadcont:nth-child(12) .mini-circ{
+    animation: shadow 1.7s linear infinite;
+    animation-delay: 1.1s;
+}
+.shadcont:nth-child(13) {
+    transform: rotate(240deg);
+}
+.shadcont:nth-child(13) .mini-circ{
+    animation: shadow 1.7s linear infinite;
+    animation-delay: 1.2s;
+}
+.shadcont:nth-child(14) {
+    transform: rotate(260deg);
+}
+.shadcont:nth-child(14) .mini-circ{
+    animation: shadow 1.7s linear infinite;
+    animation-delay: 1.3s;
+}
+.shadcont:nth-child(15) {
+    transform: rotate(280deg);
+}
+.shadcont:nth-child(15) .mini-circ{
+    animation: shadow 1.7s linear infinite;
+    animation-delay: 1.4s;
+}
+.shadcont:nth-child(16) {
+    transform: rotate(300deg);
+}
+.shadcont:nth-child(16) .mini-circ{
+    animation: shadow 1.7s linear infinite;
+    animation-delay: 1.5s;
+}
+.shadcont:nth-child(17) {
+    transform: rotate(320deg);
+}
+.shadcont:nth-child(17) .mini-circ{
+    animation: shadow 1.7s linear infinite;
+    animation-delay: 1.6s;
+}
+.shadcont:nth-child(18) {
+    transform: rotate(340deg);
+}
+.shadcont:nth-child(18) .mini-circ{
+    animation: shadow 1.7s linear infinite;
+    animation-delay: 1.7s;
+}
+@keyframes shadow {
+    0% {
+        box-shadow: 0 0 4px 2px blueviolet, 
+        0 0 7px 8px rgb(2, 176, 168), 
+        inset 0 0 6px 5px rgb(1, 209, 199);
+    }
+    80% {
+        box-shadow: 0 0 1px 1px rgba(49, 49, 232, 0.511);
+    }
+}
